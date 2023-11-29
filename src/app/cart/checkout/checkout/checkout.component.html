@@ -35,7 +35,7 @@
 
     <div class="button-container">
       <form method="post">
-        <button type="button" id="submitBtn" (click)="submitOrder()" [disabled]="certificates.length == 0">Checkout
+        <button type="button" id="submitBtn" (click)="submitOrder()" [disabled]="checkIfCartDisabled()">Checkout
         </button>
         <button type="button" id="cancelBtn" (click)="goBack()">Back
         </button>

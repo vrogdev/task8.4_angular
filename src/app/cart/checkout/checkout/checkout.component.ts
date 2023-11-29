@@ -3,6 +3,7 @@ import {CertificateService} from "../../../shared/services/certificate.service";
 import {Certificate} from "../../../shared/models/certificate";
 import {Location} from '@angular/common';
 import {OrderService} from "../../../shared/services/order.service";
+import {UserService} from "../../../shared/services/user.service";
 
 
 @Component({
@@ -17,6 +18,7 @@ export class CheckoutComponent implements OnInit {
   constructor(
     private certificateService: CertificateService,
     private orderService: OrderService,
+    private userService: UserService,
     private location: Location,
   ) {
   }
@@ -48,5 +50,9 @@ export class CheckoutComponent implements OnInit {
   submitOrder() {
     this.orderService.createOrder(this.certificates)
     this.clearOrder()
+  }
+
+  checkIfCartDisabled(): boolean {
+    return this.certificates.length == 0 && this.userService.isAuthorized()
   }
 }
