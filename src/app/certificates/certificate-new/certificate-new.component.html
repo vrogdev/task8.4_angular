@@ -1,0 +1,49 @@
+<app-navbar></app-navbar>
+
+<div class="title-container">
+  <div class="size-container">
+    <div class="title-box">
+      <span>Add New Coupon</span>
+    </div>
+  </div>
+</div>
+
+<div class="content-container">
+  <div class="size-container">
+    <form action="" method="post" id="newItemForm" [formGroup]="certificateForm" (ngSubmit)="submitForm()">
+      <div class="grid-template-container">
+        <div>
+          <label>Category</label><br/>
+          <select name="category" class="dataElement" formControlName="category" (change)="modifyForm($event)">
+            <option value="certificates" [selected]="true">Certificates</option>
+            <option value="tags">Tags</option>
+          </select>
+        </div>
+        <div id="itemName">
+          <label>Item Name</label>
+          <input type="text" name="itemName" class="dataElement" formControlName="itemName">
+        </div>
+
+        <div id="optional-container" #optional>
+          <div id="short-desc-container" class="optional">
+            <label>Description:</label><br/>
+            <textarea name="description" class="dataElement textAreaSizing" formControlName="description"></textarea>
+          </div>
+          <div class="optional">
+            <label>Valid to</label><br/>
+            <input type="date" name="validTo" class="dataElement" formControlName="duration">
+          </div>
+          <div class="optional">
+            <label>Price</label><br/>
+            <input type="text" name="price" class="dataElement" formControlName="price">
+          </div>
+        </div>
+        <div id="btn-container">
+          <button type="reset" id="cancelBtn">Cancel</button>
+          <button type="submit" id="submitBtn" [disabled]="!certificateForm.valid">Add</button>
+        </div>
+
+      </div>
+    </form>
+  </div>
+</div>

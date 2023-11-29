@@ -1,0 +1,20 @@
+<div class="main-container">
+  <div id="content-container" class="content-container">
+
+    <div class="full-width" *ngFor="let tag of tags">
+      <div class="flex-column">
+        <div class="img-container"></div>
+        <div class="description-container flex-column">
+          <div class="flex-between">
+            <span id="tag-name-tpl">{{tag.name}}</span>
+            <span class="material-icons gray-icon regular">favorite</span>
+          </div>
+          <div class="flex-between">
+            <span class="smaller gray">Tag</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

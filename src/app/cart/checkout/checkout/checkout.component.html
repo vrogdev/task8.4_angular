@@ -1,0 +1,46 @@
+<app-navbar></app-navbar>
+
+<div class="checkout-container flex-center-column">
+  <div class="checkout-size-container" id="cartContainer">
+    <div id="itemContainer">
+      <ng-container *ngIf="certificates.length != 0">
+        <app-cart-item *ngFor="let certificate of certificates" [certificate]="certificate"></app-cart-item>
+      </ng-container>
+      <ng-container *ngIf="certificates.length == 0">
+        <div class="flex-center-column">
+          <img src="https://i.imgur.com/dCdflKN.png" width="130" height="130" class="img-fluid mb-4 mr-3">
+          <h3><strong>Your Cart is Empty</strong></h3>
+          <h4>Add something to make me happy :)</h4>
+          <a routerLink="">continue shopping</a>
+        </div>
+      </ng-container>
+    </div>
+
+    <div class="line-size-container">
+      <hr>
+    </div>
+
+    <div class="total-price-container">
+      <div class="price-box">
+        <p><b id="priceTotal">{{totalPrice | customCurrency}}</b></p>
+      </div>
+      <div class="total-box">
+        <p><b>Total</b></p>
+      </div>
+    </div>
+
+    <div class="button-container">
+      <button (click)="clearOrder()">Clear items</button>
+    </div>
+
+    <div class="button-container">
+      <form method="post">
+        <button type="button" id="submitBtn" (click)="submitOrder()" [disabled]="certificates.length == 0">Checkout
+        </button>
+        <button type="button" id="cancelBtn" (click)="goBack()">Back
+        </button>
+      </form>
+    </div>
+
+  </div>
+</div>

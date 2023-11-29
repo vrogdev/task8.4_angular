@@ -1,0 +1,32 @@
+<header>
+  <div class="header-container">
+    <div class="navbar">
+      <div class="container nav-container">
+        <div class="menu-size-container">
+          <button class="menu-btn">
+            <div class="hamburger-lines">
+              <span class="line line1"></span>
+              <span class="line line2"></span>
+              <span class="line line3"></span>
+            </div>
+          </button>
+          <a routerLink=""><img src="assets/epam_logo.svg" alt="Logo" class="header-logo"></a>
+        </div>
+        <div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header-container header-container-links">
+    <span class="material-icons gray-icon">favorite</span>
+    <a routerLink="/cart"><span class="material-icons gray-icon">shopping_cart</span></a>
+
+    <ul>
+      <li><a class="header-link" *ngIf="this.userService.isAuthorized(); else loginBranch"
+             (click)="userService.logout()">Logout [{{userService.getAuthorizedUsername()}}]</a></li>
+      <ng-template #loginBranch>
+        <a class="header-link" routerLink="/login">Login</a>
+      </ng-template>
+    </ul>
+  </div>
+</header>

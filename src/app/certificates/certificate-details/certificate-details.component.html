@@ -1,0 +1,27 @@
+<app-navbar></app-navbar>
+
+<div class="details-container flex-center-column">
+  <div class="details-flex-template-box">
+    <div class="img-box"></div>
+    <div class="information-box">
+      <div>
+        <span style="font-weight: bold; font-size: 3cap" id="itemName">{{certificate.name}}</span>
+        <p id="short-desc">{{certificate.description}}</p>
+        <span id="time-left">Time Left To Buy</span><br/>
+        <span id="timer">{{certificate.duration}}</span>
+
+        <div class="flex-between-center">
+          <p style="font-weight: bold" id="price">{{certificate.price | currency}}</p>
+          <div class="cart-link-container">
+            <a id="add-to-cart" (click)="addToOrder()">Add To Cart</a>
+            <span class="material-icons">shopping_cart</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="long-desc-box">
+      <h1>Item Detailed Description</h1>
+      <p id="long-desc">{{certificate.description}}</p>
+    </div>
+  </div>
+</div>

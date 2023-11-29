@@ -1,0 +1,26 @@
+<div class="full-width">
+  <div class="flex-column">
+    <a class="itemLink" routerLink="/certificate/{{certificate.id}}">
+      <div class="img-container"></div>
+    </a>
+    <div class="description-container flex-column">
+      <div class="flex-between">
+        <a class="itemLink" routerLink="/certificate/{{certificate.id}}">
+          <span id="coupon-name-tpl">{{certificate.name}}</span>
+        </a>
+        <span class="material-icons gray-icon regular">favorite</span>
+      </div>
+      <div class="flex-between">
+        <span class="smaller" id="description-tpl">{{certificate.description}}</span>
+        <span class="smaller gray" id="expiration-tpl">Expires in {{certificate.duration}} days</span>
+      </div>
+      <div class="flex-between">
+        <span class="price" id="price-tpl">{{certificate.price | customCurrency}}</span>
+        <input type="hidden" id="certificateId" value=""/>
+        <button name="addToCart" class="add-to-cart-btn" id="addToCart" (click)="addToOrder()">Add to
+          cart
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

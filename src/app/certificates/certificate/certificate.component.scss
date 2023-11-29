@@ -1,0 +1,311 @@
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  flex-direction: row;
+  clear: both;
+  background: #fff;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid silver;
+}
+
+.header-link {
+  display: inline;
+  font: 16px Arial;
+  text-decoration: none;
+  color: black;
+}
+
+.gray-icon {
+  color: #757575;
+}
+
+.header-container-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  display: inline;
+}
+
+li::after {
+  content: " ";
+  word-spacing: 1em;
+  background-image: linear-gradient(
+      -0.25turn,
+      transparent 0 calc(50% - 0.03em),
+      currentcolor 0 calc(50% + 0.03em),
+      transparent 0
+  );
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: center;
+  padding: 20px;
+}
+
+img.header-logo {
+  display: block;
+  position: relative;
+  top: 3px;
+  float: right;
+  width: 100px;
+}
+
+
+.header-container .search-box {
+  border: 1px black solid;
+  width: 400px;
+  height: 40px;
+  position: static;
+  float: left;
+  box-sizing: border-box;
+}
+
+.header-container select.select-search-box {
+  border: 1px solid;
+  height: 40px;
+  width: 150px;
+  background: white;
+  text-align: center
+}
+
+footer {
+  height:6%;
+  text-align: center;
+  padding: 10px;
+  color: #adadad;
+  background-color: #ffffff;
+  border-top: 1px solid silver;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* Hamburger menu style */
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.navbar {
+  width: 100%;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+
+.menu-size-container {
+  width: 160px;
+}
+
+.menu-btn {
+  position: relative;
+  height: 38px;
+  width: 38px;
+  border: 0;
+  background-color: white;
+}
+
+.hamburger-lines {
+  height: 26px;
+  width: 32px;
+  position: absolute;
+  top: 4px;
+  left: 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburger-lines .line {
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
+  background: #0e2431;
+}
+
+.hamburger-lines .line1 {
+  transform-origin: 0% 0%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.hamburger-lines .line2 {
+  transition: transform 0.2s ease-in-out;
+}
+
+.hamburger-lines .line3 {
+  transform-origin: 0% 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+/*[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 10px;
+    width: 10px;
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgd2lkdGg9IjEyMy4wNXB4IiBoZWlnaHQ9IjEyMy4wNXB4IiB2aWV3Qm94PSIwIDAgMTIzLjA1IDEyMy4wNSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTIzLjA1IDEyMy4wNTsiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHBhdGggZD0iTTEyMS4zMjUsMTAuOTI1bC04LjUtOC4zOTljLTIuMy0yLjMtNi4xLTIuMy04LjUsMGwtNDIuNCw0Mi4zOTlMMTguNzI2LDEuNzI2Yy0yLjMwMS0yLjMwMS02LjEwMS0yLjMwMS04LjUsMGwtOC41LDguNQ0KCQljLTIuMzAxLDIuMy0yLjMwMSw2LjEsMCw4LjVsNDMuMSw0My4xbC00Mi4zLDQyLjVjLTIuMywyLjMtMi4zLDYuMSwwLDguNWw4LjUsOC41YzIuMywyLjMsNi4xLDIuMyw4LjUsMGw0Mi4zOTktNDIuNGw0Mi40LDQyLjQNCgkJYzIuMywyLjMsNi4xLDIuMyw4LjUsMGw4LjUtOC41YzIuMy0yLjMsMi4zLTYuMSwwLTguNWwtNDIuNS00Mi40bDQyLjQtNDIuMzk5QzEyMy42MjUsMTcuMTI1LDEyMy42MjUsMTMuMzI1LDEyMS4zMjUsMTAuOTI1eiIvPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=);
+    background-size: 10px 10px;
+}*/
+
+/*
+input::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    margin-left: .4em;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23777'><path d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z'/></svg>");
+    cursor: pointer;
+}*/
+/*.search-close-btn {
+
+}*/
+
+span.deleteicon {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+.search-clear-btn {
+  position: absolute;
+  display: block;
+  visibility: hidden;
+  right: 5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: #ccc;
+  font: 13px monospace;
+  text-align: center;
+  line-height: 1em;
+  cursor: pointer;
+}
+
+.visible {
+  visibility: visible;
+}
+
+/*
+span.deleteicon input {
+    padding-right: 18px;
+    box-sizing: border-box;
+}*/
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between
+}
+
+.flex-space-around-center {
+  /*
+  display: flex;
+  justify-content: space-around;
+  align-items: center
+  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:100px
+}
+
+/*----------------------------------------------------------*/
+
+.category-container {
+  background-color: #E0E0E0;
+  padding: 20px
+}
+
+.category-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.img-box {
+  width: 40px;
+  height: 40px;
+  background-color: white
+}
+
+
+/*----------------------------------------*/
+.main-container {
+  padding: 20px 10px
+}
+
+.content-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 50px;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 10px
+}
+
+.full-width {
+  width: 100%
+}
+
+.img-container {
+  height: 200px;
+  background-color: #E0E0E0
+}
+
+.description-container {
+  background-color: white;
+  padding: 10px;
+  gap: 10px
+}
+
+.regular {
+  font-size: 15px;
+}
+
+.smaller {
+  font-size: 10px;
+}
+
+span.gray {
+  color: #888888;
+}
+
+span.price {
+  font-weight: bold
+}
+
+.add-to-cart-btn {
+  border: 1px solid;
+  width: 100px;
+  background-color: white
+}

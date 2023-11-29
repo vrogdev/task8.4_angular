@@ -1,0 +1,13 @@
+<app-search-box (onSearch)="doSearch($event)"></app-search-box>
+
+<br/>
+
+<app-category-bar (onCategoryChange)="doTags($event)"></app-category-bar>
+
+<app-certificates-list *ngIf="!showTags; else tagsBranch" [displayedItems]="certificates"></app-certificates-list>
+
+<ng-template #tagsBranch>
+  <app-tags-list [displayedTags]="tags"></app-tags-list>
+</ng-template>
+
+<app-scroll-btn></app-scroll-btn>

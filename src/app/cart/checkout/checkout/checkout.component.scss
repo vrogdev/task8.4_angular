@@ -1,0 +1,130 @@
+.flex-center-column {
+  display: flex;
+  align-items: center;
+  flex-direction: column
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.size-container {
+  width: 60%;
+}
+
+/*----------------*/
+
+.title-container {
+  background-color: #BDBDBD;
+  height: 60px;
+  display: flex;
+  justify-content: center
+}
+
+.size-container {
+  width: 80%;
+}
+
+.title-container .title-box {
+  padding: 20px;
+  color: white;
+  font-weight: bold
+}
+
+/*----------------*/
+
+.checkout-container {
+  background-color: #FFFFFF;
+}
+
+.checkout-container .checkout-size-container {
+  display: flex;
+  justify-content: space-between;
+  align-content: space-around;
+  flex-direction: column;
+  width: 80%;
+}
+
+.checkout-container .coupon-container {
+  padding: 20px;
+}
+
+.coupon-container .img-box {
+  width: 10%;
+  background-color: #E0E0E0
+}
+
+.coupon-container .desc-box {
+  width: 70%;
+}
+
+.coupon-container .price-box {
+  width: 10%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center
+}
+
+.checkout-container .line-size-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px
+}
+
+.checkout-container hr {
+  width: 100%;
+  height: 1px;
+  border-width: 0;
+  color: gray;
+  background-color: gray
+}
+
+.checkout-container .total-price-container {
+  display: flex;
+  align-content: end;
+  padding: 20px;
+  flex-direction: row-reverse;
+  justify-content: space-between
+}
+
+.total-price-container .price-box {
+  width: 10%
+}
+
+.total-price-container .total-box {
+  width: 85%;
+  text-align: end
+}
+
+.checkout-container .button-container {
+  display: flex;
+  align-content: end;
+  padding: 20px;
+  flex-direction: row-reverse;
+}
+
+.button-container form {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px
+}
+
+.button-container button#cancelBtn {
+  background-color: white;
+  color: #828282;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: 1px solid #828282;
+  width: 150px;
+}
+
+.button-container button#submitBtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  width: 150px;
+}

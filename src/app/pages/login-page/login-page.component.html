@@ -1,0 +1,21 @@
+<div class="login-container">
+  <div class="size-container">
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+      <div class="flex-column">
+        <div class="logo-container">
+          <div class="box-container">
+            <span>Logo</span>
+          </div>
+        </div>
+
+        <div class="padding-container">
+          <label #errorLabel [hidden]="true">User not found</label>
+          <input type="text" placeholder="Login" formControlName="username"  required>
+          <input type="password" placeholder="Password" formControlName="password" required>
+
+          <button type="submit" class="login-btn" id="login-btn" [disabled]="!loginForm.valid">Login</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+
+.category-container {
+  background-color: #E0E0E0;
+  padding: 20px
+}
+
+.category-container .category-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.category-container .img-box {
+  width: 40px;
+  height: 40px;
+  background-color: white
+}
+
+
+.flex-space-around-center {
+  /*
+  display: flex;
+  justify-content: space-around;
+  align-items: center
+  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:100px
+}

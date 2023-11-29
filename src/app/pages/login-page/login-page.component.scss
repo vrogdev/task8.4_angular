@@ -1,0 +1,149 @@
+/* Bordered form */
+form {
+  border: 1px solid black;
+  background-color: white;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column
+}
+
+.login-container {
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-container .size-container {
+  width: 30%;
+  height: 40%;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input::placeholder {
+  text-align: center;
+}
+
+/* Set a style for login buttons */
+.login-btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra style for the cancel button (red) */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* avatar logo container */
+.logo-container {
+  position: relative;
+  top: -124px;
+  margin: 24px 0 12px 0;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.box-container {
+  width: 200px;
+  height: 200px;
+  border: 1px black;
+  border-radius: 50%;
+  background-color: #C4C4C4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-container span {
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Add padding to containers */
+.login-container .padding-container {
+  padding: 0 60px 20px;
+}
+
+
+
+/*
+.login-form-container {
+  background-color: #f9f9f9;
+  border: 2px solid #a0a0a0;
+  font-size: larger;
+  margin: auto;
+  min-width: 300px;
+  max-width: 600px;
+  width: 40%;
+
+  button,
+  &::placeholder {
+    font-size: 19px;
+    font-weight: 500;
+  }
+
+  input {
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    display: block;
+    margin: 8px 0;
+    padding: 8px;
+    text-align: center;
+    width: 100%;
+
+    &.ng-valid[required], .ng-valid.required  {
+      border-left: 5px solid #42A948; !* green *!
+    }
+
+    &.ng-invalid:not(form)  {
+      border-left: 5px solid #a94442; !* red *!
+    }
+  }
+}
+
+!* Center the avatar image inside this container *!
+.img-container {
+  margin: -15% auto;
+  max-width: 150px;
+  text-align: center;
+  width: 45%;
+
+  .avatar {
+    border-radius: 0 0 50% 50%;
+    width: 80%;
+  }
+}
+
+!* Add padding to containers *!
+.input-container {
+  margin: 15% auto 20px;
+  padding: 16px;
+  width: 70%;
+}
+*/

@@ -1,0 +1,8 @@
+<div class="main-container">
+  <div id="content-container" class="content-container">
+    <app-certificate
+      *ngFor="let certificate of certificates"
+      [certificate-card]="certificate">
+    </app-certificate>
+  </div>
+</div>
