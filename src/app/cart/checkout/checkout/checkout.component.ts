@@ -27,12 +27,14 @@ export class CheckoutComponent implements OnInit {
     let cart = localStorage.getItem("cart");
     let cartIds: string[] = JSON.parse(cart);
 
-    for (const id of cartIds) {
-      this.certificateService.getCertificate(Number(id))
-        .subscribe(certificate => {
-          this.certificates.push(certificate)
-          this.totalPrice += certificate.price
-        })
+    if (cartIds != null) {
+      for (const id of cartIds) {
+        this.certificateService.getCertificate(Number(id))
+          .subscribe(certificate => {
+            this.certificates.push(certificate)
+            this.totalPrice += certificate.price
+          })
+      }
     }
 
   }

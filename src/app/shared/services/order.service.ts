@@ -2,7 +2,6 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Certificate} from "../models/certificate";
 import {UserService} from "./user.service";
-import {tap} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -45,11 +44,13 @@ export class OrderService {
       let userId = this.userService.getAuthorizedUserId()
       const url = `${this.apiUrl}create?userId=${userId}&giftCertificateId=${certificate.id}`;
       this.http.post<any>(url, certificate, {observe: "response"})
-        .pipe(tap(response => {
-          if(response.status != 200) {
-            throw new Error(`can't add order with user id: ${userId} and certificate id ${certificate.id}`)
+        .subscribe({
+          next: response => {
+            if (response.status != 200) {
+              throw new Error(`can't add order with user id: ${userId} and certificate id ${certificate.id}`)
+            }
           }
-        }));
+        });
     }
   }
 
